@@ -35,24 +35,21 @@ int main ()
 	Person list[T];
 	string line;
 	int count = 3;
-	int id = 0, age = 0;
 	stringstream ss;
 	int index = 0;
 	while (getline(in, line)) {
 		if (count == 3) {
 			ss << line; 
-			ss >> id;
+			ss >> list[index].id;
 			ss.clear();
 			ss.str("");
-			list[index].id = id;
 		} else if (count == 2) {
 			list[index].name = line;
 		} else if (count == 1) {
 			ss << line;
-			ss >> age;
+			ss >> list[index].age;
 			ss.clear();
 			ss.str("");
-			list[index].age = age;
 		} else {
 			printPerson(list[index]);
 			index++;
