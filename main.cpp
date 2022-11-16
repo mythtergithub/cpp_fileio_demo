@@ -20,7 +20,7 @@ void printPerson(Person n)
 int main ()
 {
 	ifstream in;
-	char *filename = "file.in";
+	char *filename = "main.in";
 	
 	in.open(filename);
 	if (!in.is_open()) {
